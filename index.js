@@ -7,6 +7,7 @@ const path = require("path");
 const pins = require("./src/pins/pins.router");
 const users = require("./src/user/users.router");
 const boards = require("./src/boards/boards.router");
+const payments = require("./src/payments/payments.router");
 const auth = require("./src/auth/auth.router");
 const mongoose = require("mongoose");
 
@@ -29,6 +30,7 @@ app.disable("x-powered-by Nuclio");
 app.use("/pins", pins);
 app.use("/users", users);
 app.use("/boards", boards);
+app.use("/payments", payments);
 app.use("/auth", auth);
 
 const start = async () => {
